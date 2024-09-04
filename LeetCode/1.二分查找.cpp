@@ -27,7 +27,7 @@ public:
 };
 
 //×ó±ÕÓÒ¿ªĞ´·¨(ÉıĞò)
-class Solution {
+class Solution2 {
 public:
     int search(std::vector<int>& nums, int target) {
         int left = 0, right = nums.size() - 1;                    
@@ -47,7 +47,7 @@ public:
 
 
 //×ó±ÕÓÒ±ÕĞ´·¨(½µĞò)
-class Solution {
+class Solution3 {
 public:
     int search(std::vector<int>& nums, int target) {
         int left = 0, right = nums.size() - 1, middle;

@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="1.二分查找.cpp" />
     <ClCompile Include="2.移除元素.cpp" />
+    <ClCompile Include="3.有序数组的平方.cpp" />
+    <ClCompile Include="4.长度最小的子数组.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
