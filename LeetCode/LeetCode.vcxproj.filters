@@ -18,19 +18,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.二分查找.cpp">
+    <ClCompile Include="1.二分查找.h">
       <Filter>源文件\数组</Filter>
     </ClCompile>
-    <ClCompile Include="2.移除元素.cpp">
+    <ClCompile Include="2.移除元素.h">
       <Filter>源文件\数组</Filter>
     </ClCompile>
-    <ClCompile Include="3.有序数组的平方.cpp">
+    <ClCompile Include="3.有序数组的平方.h">
       <Filter>源文件\数组</Filter>
     </ClCompile>
-    <ClCompile Include="4.长度最小的子数组.cpp">
+    <ClCompile Include="4.长度最小的子数组.h">
       <Filter>源文件\数组</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="5.螺旋矩阵II.h">
+      <Filter>源文件\数组</Filter>
+    </ClCompile>
+    <ClCompile Include="6.区间和.cpp">
+      <Filter>源文件\数组</Filter>
+    </ClCompile>
+    <ClCompile Include="7.开发商购买土地.cpp">
       <Filter>源文件\数组</Filter>
     </ClCompile>
   </ItemGroup>
