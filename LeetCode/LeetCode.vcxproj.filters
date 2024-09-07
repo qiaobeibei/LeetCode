@@ -16,6 +16,9 @@
     <Filter Include="源文件\数组">
       <UniqueIdentifier>{8e4df1ff-df98-499c-9ea8-e00d09ab059f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\排序算法">
+      <UniqueIdentifier>{aa017955-74fc-423c-a3a2-a4caf41940c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h">
@@ -39,5 +42,13 @@
     <ClCompile Include="7.开发商购买土地.cpp">
       <Filter>源文件\数组</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="快速排序算法.h">
+      <Filter>源文件\排序算法</Filter>
+    </ClInclude>
+    <ClInclude Include="大根堆排序.h">
+      <Filter>源文件\排序算法</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

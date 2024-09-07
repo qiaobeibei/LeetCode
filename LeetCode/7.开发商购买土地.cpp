@@ -19,12 +19,69 @@
 	1 <= n, m <= 100；
 	n 和 m 不同时为 1。
 */
+
+
+/*
+* 在 C++ 中，所有全局变量（在任何函数之外定义的变量）和静态局部变量都会自动初始化为零。
+《二维前缀和》
+对于给定的二维矩阵A,我们构造一个二维数组s,其中s[i][j]表示从矩阵的左上角(1,1)到位置(i-1,j-1)的所有元素的和。
+注意：1)这里的循环必须要从1开始，因为从0开始循环，会导致s[-1][0]、s[-1][-1]、s[0][-1]的出现，出现内存泄露
+	  2)矩阵大小为（n+1）*（m+1），否则会导致最后一位数字存储不进去，数组越界
+计算公式：s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + x;
+文字描述：s[i][j]=左边的区域和+上边的区域和-重复计算的区域和+当前元素的值
+
+假设有一个3*3的矩阵：
+		1 2 3
+		4 5 6
+		7 8 9
+	s[1][1] = s[0][1] + s[1][0] - s[0][0] + A[1][1] = 1
+	s[1][2] = s[0][2] + s[1][1] - s[0][1] + A[1][2] = 3
+	s[2][2] = s[1][2] + s[2][1] - s[1][1] + A[2][2] = 11
+*/
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <climits>
 
-// 前缀和
+// 二维前缀和（更好）
+int main() {
+	using std::vector;
+	using std::cin;
+	using std::cout;
+
+	int n, m, temp;											// temp用于暂时存储输入元素的值
+	cin >> n >> m;
+	// 定义二维前缀和矩阵
+	vector<vector<int>>* vec = new vector<vector<int>>((long long)n + 1, vector<int>((long long)m + 1, 0));
+
+	// 记录输入矩阵的前缀和
+	for (int i = 1; i <= n; i++)
+		for (int j = 1; j <= m; j++) {
+			cin >> temp;
+			// 前缀和矩阵
+			(*vec)[i][j] = (*vec)[(long long)i - 1][j] + (*vec)[i][(long long)j - 1]
+				- (*vec)[(long long)i - 1][(long long)j - 1] + temp;
+		}
+
+	int ans = INT_MAX;
+	// 水平分割
+	for (int i = 1; i < n; i++) {
+		int subX = (*vec)[n][m] - 2 * (*vec)[i][m];
+		ans = std::min(std::abs(subX), ans);
+	}
+	// 垂直分割
+	for (int j = 1; j < m; j++) {
+		int subY = (*vec)[n][m] - 2 * (*vec)[n][j];
+		ans = std::min(std::abs(subY), ans);
+	}
+
+	cout << ans;
+
+	delete vec;
+}
+
+
+// 一维前缀和(分别用两个数组存储二维矩阵行和列的元素和)
 int main() {
 	using std::vector;
 	using std::cin;
@@ -49,7 +106,7 @@ int main() {
 		if (j != 0)
 			(*col)[j] += (*col)[(long long)j - 1];			// 将col的元素变换为当前元素与前面元素之和（前缀和）
 
-
+	// 前缀和求解方法
 	int result_row = INT_MAX;
 	for (int i = 0; i < n - 1; i++)
 		// 求解矩阵划分为两部分后，两部分差的最小值
@@ -67,37 +124,3 @@ int main() {
 	return 0;
 }
 
-
-#include<iostream>
-#include<cmath>
-using namespace std;
-const int N = 110;
-int s[N][N];
-int n, m, ans = 1e9;
-void solve()
-{
-	for (int i = 1; i <= n; i++)
-		for (int j = 1; j <= m; j++)
-		{
-			int x;
-			cin >> x;
-			s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + x;
-		}
-	for (int i = 1; i < n; i++)
-	{
-		int x = abs(s[n][m] - 2 * s[i][m]);
-		ans = min(ans, x);
-	}
-	for (int i = 1; i < m; i++)
-	{
-		int x = abs(s[n][m] - 2 * s[n][i]);
-		ans = min(ans, x);
-	}
-	cout << ans;
-}
-int main()
-{
-	cin >> n >> m;
-	solve();
-	return 0;
-}
