@@ -19,6 +19,9 @@
     <Filter Include="源文件\排序算法">
       <UniqueIdentifier>{aa017955-74fc-423c-a3a2-a4caf41940c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\链表">
+      <UniqueIdentifier>{0f395990-77a3-4196-85f0-ac4711702a57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h">
@@ -41,6 +44,12 @@
     </ClCompile>
     <ClCompile Include="7.开发商购买土地.cpp">
       <Filter>源文件\数组</Filter>
+    </ClCompile>
+    <ClCompile Include="8.移除链表元素.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="8.设计链表.cpp">
+      <Filter>源文件\链表</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

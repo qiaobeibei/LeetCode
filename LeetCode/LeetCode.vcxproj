@@ -146,6 +146,8 @@
     <ClCompile Include="5.螺旋矩阵II.h" />
     <ClCompile Include="6.区间和.cpp" />
     <ClCompile Include="7.开发商购买土地.cpp" />
+    <ClCompile Include="8.移除链表元素.cpp" />
+    <ClCompile Include="8.设计链表.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="大根堆排序.h" />
