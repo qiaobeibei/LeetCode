@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h" />
+    <ClCompile Include="11.两两交换链表中的节点.cpp" />
     <ClCompile Include="2.移除元素.h" />
     <ClCompile Include="3.有序数组的平方.h" />
     <ClCompile Include="4.长度最小的子数组.h" />
@@ -147,7 +148,8 @@
     <ClCompile Include="6.区间和.cpp" />
     <ClCompile Include="7.开发商购买土地.cpp" />
     <ClCompile Include="8.移除链表元素.cpp" />
-    <ClCompile Include="8.设计链表.cpp" />
+    <ClCompile Include="10.反转链表.cpp" />
+    <ClCompile Include="9.设计链表.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="大根堆排序.h" />

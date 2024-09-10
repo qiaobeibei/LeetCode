@@ -18,14 +18,6 @@ void deleteAtIndex(int index) 如果下标有效，则删除链表中下标为 index 的节点。
 
 class MyLinkedList {
 public:
-    struct ListNode {
-        int val;
-        ListNode* next;
-        ListNode(int x) : val(x), next(nullptr) {}
-        ListNode() :val(0), next(nullptr) {}
-        ListNode(int x, ListNode* next) : val(x), next(next) {}
-    };
-
     MyLinkedList() {
         _dummyHead = new ListNode(0);
         _size = 0;
@@ -39,14 +31,21 @@ public:
     void printLinkedList();
 
 private:
+    struct ListNode {
+        int val;
+        ListNode* next;
+        explicit ListNode(int x) : val(x), next(nullptr) {}
+        ListNode() :val(0), next(nullptr) {}
+        ListNode(int x, ListNode* next) : val(x), next(next) {}
+    };
     ListNode* _dummyHead;
     int _size;
 };
 
 // 获取链表中第 index 个节点的值。如果索引无效，则返回-1
 int MyLinkedList::get(int index) {
-    auto cur = new ListNode();
-    cur = _dummyHead;
+    if (index < 0 or index > _size - 1) return - 1;
+    auto cur = _dummyHead;
     int len = 0;
     while (cur->next != nullptr) {
         if (len == index)
@@ -88,6 +87,7 @@ void MyLinkedList::addAtIndex(int index, int val) {
                 auto newNode = new ListNode(val);
                 newNode->next = cur->next;
                 cur->next = newNode;
+                _size++;
                 break;
             }
             else {
@@ -99,13 +99,14 @@ void MyLinkedList::addAtIndex(int index, int val) {
 }
 // 如果索引 index 有效，则删除链表中的第 index 个节点
 void MyLinkedList::deleteAtIndex(int index) {
-    auto cur = new ListNode();
-    cur = _dummyHead;
+    if (index< 0 || index > _size - 1) return;//index值无效，直接返回
+    auto cur = _dummyHead;
     int len = 0;
 
     while (cur->next != nullptr) {
         if (len == index) {
             cur->next = cur->next->next;
+            _size--;
             break;
         }
         else {
@@ -127,16 +128,81 @@ void MyLinkedList::printLinkedList() {
     std::cout << std::endl;
 }
 
-int main() {
-    MyLinkedList linkedList = MyLinkedList();
-    linkedList.addAtHead(1);
-    linkedList.addAtTail(3);
-    linkedList.addAtIndex(1, 2);
-    linkedList.printLinkedList();
-    std::cout << linkedList.get(1) << std::endl;
-    linkedList.deleteAtIndex(1);
-    linkedList.printLinkedList();
-    std::cout << linkedList.get(1) << std::endl;
+class MyLinkedList2 {
+public:
+    MyLinkedList2() {
+        _dummyHead = new ListNode(0);
+        _size = 0;
+    }
+    ~MyLinkedList2() {  }
+    
+    int get(int index) {// 获取链表中第index个节点的值
+        if (index <0 or index > _size - 1) return -1;
+        auto head = _dummyHead->next;
+        while (index--) head = head->next;
+        return head->val;
+    }
+    void addAtHead(int val) {// 在链表的第一个元素之前添加一个值为val的节点
+        auto newNode = new ListNode(val);
+        newNode->next = _dummyHead->next;
+        _dummyHead->next = newNode;
+        _size++;
+    }
+
+    void addAtTail(int val) {// 将值为val的节点追加到链表的最后一个元素
+        auto cur = _dummyHead;
+        while (cur->next != nullptr) cur = cur->next;
+        cur->next = new ListNode(val);
+        _size++;
+    }
+
+    void addAtIndex(int index, int val) {//在链表的第一个元素之前添加一个值为val的节点
+        auto cur = _dummyHead;
+        auto newNode = new ListNode(val);
+
+        if (index <= 0)  addAtHead(val);
+        else if (index == _size) addAtTail(val);
+        else if (index > _size) return;
+        else {
+            while (index--) cur = cur->next;
+            newNode->next = cur->next;
+            cur->next = newNode;
+            _size++;
+        }
+    }
+    void deleteAtIndex(int index) {// 删除链表中的第index个节点
+        if (index<0 || index>_size - 1) return;//index值无效，直接返回
+        ListNode* cur = _dummyHead, * t = nullptr;
+        while (index--) cur = cur->next;   // 找到第index-1个结点
+        t = cur->next;
+        cur->next = t->next;
+        delete t;
+        _size--;
+    }
 
 
-}
+private:
+    struct ListNode {
+        int val;
+        ListNode* next;
+        explicit ListNode(int x) : val(x), next(nullptr) {}
+        ListNode() :val(0), next(nullptr) {}
+        ListNode(int x, ListNode* next) : val(x), next(next) {}
+    };
+    ListNode* _dummyHead;
+    int _size;
+};
+
+//int main() {
+//    MyLinkedList linkedList = MyLinkedList();
+//    linkedList.addAtHead(1);
+//    linkedList.addAtTail(3);
+//    linkedList.addAtIndex(1, 2);
+//    linkedList.printLinkedList();
+//    std::cout << linkedList.get(1) << std::endl;
+//    linkedList.deleteAtIndex(1);
+//    linkedList.printLinkedList();
+//    std::cout << linkedList.get(1) << std::endl;
+//    MyLinkedList2 linkedList = MyLinkedList2();
+//    linkedList.deleteAtIndex(0);
+//}

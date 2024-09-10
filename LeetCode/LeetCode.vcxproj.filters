@@ -48,7 +48,13 @@
     <ClCompile Include="8.移除链表元素.cpp">
       <Filter>源文件\链表</Filter>
     </ClCompile>
-    <ClCompile Include="8.设计链表.cpp">
+    <ClCompile Include="9.设计链表.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="10.反转链表.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="11.两两交换链表中的节点.cpp">
       <Filter>源文件\链表</Filter>
     </ClCompile>
   </ItemGroup>
