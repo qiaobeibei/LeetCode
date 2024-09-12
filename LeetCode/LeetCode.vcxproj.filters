@@ -22,6 +22,9 @@
     <Filter Include="源文件\链表">
       <UniqueIdentifier>{0f395990-77a3-4196-85f0-ac4711702a57}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\哈希表">
+      <UniqueIdentifier>{31747483-8abf-4716-b3ae-bf144a58eb66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h">
@@ -55,6 +58,15 @@
       <Filter>源文件\链表</Filter>
     </ClCompile>
     <ClCompile Include="11.两两交换链表中的节点.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="12.删除链表的倒数第N个节点.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="13.链表相交.cpp">
+      <Filter>源文件\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="14.环形链表Ⅱ.cpp">
       <Filter>源文件\链表</Filter>
     </ClCompile>
   </ItemGroup>

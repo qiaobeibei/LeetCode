@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="1.二分查找.h" />
     <ClCompile Include="11.两两交换链表中的节点.cpp" />
+    <ClCompile Include="12.删除链表的倒数第N个节点.cpp" />
+    <ClCompile Include="13.链表相交.cpp" />
+    <ClCompile Include="14.环形链表Ⅱ.cpp" />
     <ClCompile Include="2.移除元素.h" />
     <ClCompile Include="3.有序数组的平方.h" />
     <ClCompile Include="4.长度最小的子数组.h" />
