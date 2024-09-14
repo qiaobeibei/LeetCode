@@ -144,6 +144,9 @@
     <ClCompile Include="12.删除链表的倒数第N个节点.cpp" />
     <ClCompile Include="13.链表相交.cpp" />
     <ClCompile Include="14.环形链表Ⅱ.cpp" />
+    <ClCompile Include="15.有效的字母异位词.cpp" />
+    <ClCompile Include="16.两个数组的交集.cpp" />
+    <ClCompile Include="17.快乐数.cpp" />
     <ClCompile Include="2.移除元素.h" />
     <ClCompile Include="3.有序数组的平方.h" />
     <ClCompile Include="4.长度最小的子数组.h" />
