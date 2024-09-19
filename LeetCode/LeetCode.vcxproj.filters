@@ -78,6 +78,18 @@
     <ClCompile Include="17.快乐数.cpp">
       <Filter>源文件\哈希表</Filter>
     </ClCompile>
+    <ClCompile Include="18.两数之和.cpp">
+      <Filter>源文件\哈希表</Filter>
+    </ClCompile>
+    <ClCompile Include="19.四数相加Ⅱ.cpp">
+      <Filter>源文件\哈希表</Filter>
+    </ClCompile>
+    <ClCompile Include="20.赎金信.cpp">
+      <Filter>源文件\哈希表</Filter>
+    </ClCompile>
+    <ClCompile Include="21.三数之和.cpp">
+      <Filter>源文件\哈希表</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="快速排序算法.h">
