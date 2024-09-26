@@ -25,6 +25,9 @@
     <Filter Include="源文件\哈希表">
       <UniqueIdentifier>{31747483-8abf-4716-b3ae-bf144a58eb66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\字符串">
+      <UniqueIdentifier>{0d0bdb48-965a-4f2c-86cc-e901f2140193}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h">
@@ -89,6 +92,15 @@
     </ClCompile>
     <ClCompile Include="21.三数之和.cpp">
       <Filter>源文件\哈希表</Filter>
+    </ClCompile>
+    <ClCompile Include="22.四数之和.cpp">
+      <Filter>源文件\哈希表</Filter>
+    </ClCompile>
+    <ClCompile Include="23.反转字符串.cpp">
+      <Filter>源文件\字符串</Filter>
+    </ClCompile>
+    <ClCompile Include="24.反转字符串 II.cpp">
+      <Filter>源文件\字符串</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

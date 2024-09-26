@@ -152,6 +152,9 @@
     <ClCompile Include="2.移除元素.h" />
     <ClCompile Include="20.赎金信.cpp" />
     <ClCompile Include="21.三数之和.cpp" />
+    <ClCompile Include="22.四数之和.cpp" />
+    <ClCompile Include="23.反转字符串.cpp" />
+    <ClCompile Include="24.反转字符串 II.cpp" />
     <ClCompile Include="3.有序数组的平方.h" />
     <ClCompile Include="4.长度最小的子数组.h" />
     <ClCompile Include="5.螺旋矩阵II.h" />

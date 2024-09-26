@@ -1,140 +1,138 @@
-///*
-//¸øÄãÒ»¸öÁ´±íµÄÍ·½Úµã head ºÍÒ»¸öÕûÊý val £¬ÇëÄãÉ¾³ýÁ´±íÖÐËùÓÐÂú×ã Node.val == val 
-//µÄ½Úµã£¬²¢·µ»Ø ÐÂµÄÍ·½Úµã ¡£
-//*/
-//
-///**
-// * Definition for singly-linked list.
-// * struct ListNode {
-// *     int val;
-// *     ListNode *next;
-// *     ListNode() : val(0), next(nullptr) {}
-// *     ListNode(int x) : val(x), next(nullptr) {}
-// *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-// * };
-// */
-//
-//struct ListNode {
-//    int val;
-//    ListNode* next;
-//    ListNode(int x) : val(x), next(nullptr) {}
-//    ListNode() :val(0), next(nullptr) {}
-//    ListNode(int x, ListNode* next) : val(x), next(next) {}
-//};
-//
-//// 1.µü´ú
-//class Solution {
-//public:
-//    ListNode* removeElements(ListNode* head, int val) {
-//        if (head == nullptr) return head;
-//
-//        while (head != nullptr and head->val == val) {           // Èç¹ûÄ¿±êÊÇÍ·½áµã£¬É¾³ýÍ·½áµã
-//            ListNode* temp = head;
-//            head = head->next;
-//            delete temp;                                         // Í·½áµãÉ¾³ýºóÊÍ·ÅÄÚ´æ
-//        }
-//
-//        ListNode* cur = head;                                    // ¶¨ÒåÁÙÊ±Ö¸Õë
-//        while (cur != nullptr and cur->next != nullptr) {
-//            if (cur->next->val == val) {
-//                ListNode* temp = cur->next;
-//                cur->next = cur->next->next;                     // É¾³ýºÍvalÏàµÈµÄ·ÇÍ·½áµã
-//                delete temp;
-//            }
-//            else
-//                cur = cur->next;
-//        }
-//        return head;
-//    }
-//};
-//
-//// 2-1.µÝ¹é
-//class Solution {
-//public:
-//    ListNode* removeElements(ListNode* head, int val) {
-//        // Èç¹ûÍ·Ö¸ÕëµÄÖµµÈÓÚval£¬É¾³ý
-//        while (head != nullptr and head->val == val) {
-//            ListNode* temp = head;
-//            head = head->next;
-//            delete temp;
-//        }
-//
-//        // ÅÐ¶ÏÍ·Ö¸ÕëÊÇ·ñÎª¿Õ
-//        if (head == nullptr) return head;
-//
-//        // ÈôÍ·Ö¸Õë²»Îª¿Õ£¬É¾³ýÍ·½ÚµãºóËùÓÐÖµÎª val µÄ½Úµã
-//        head->next = removeElements(head->next, val);
-// 
-//        return head;
-//    }
-//};
-//
-//// 2-2.µÝ¹éµÄ»¯¼ò(Ã»ÓÐÊÍ·ÅÄÚ´æ)
-//class Solution {
-//public:
-//    ListNode* removeElements(ListNode* head, int val) {
-//        if (!head) return head;                             // Í·Ö¸ÕëÎª¿Õ£¬·µ»Ø
-//
-//        head->next = removeElements(head->next, val);       // Ê×ÏÈ´¦ÀíÍ·Ö¸ÕëºóÃæµÄ½áµã
-//
-//        return head->val == val ? head->next : head;
-//    }
-//};
-//
-//// 3.Ë«Ö¸Õë
-///*
-//ÉèÖÃÁ½¸ö¾ùÖ¸ÏòÍ·½ÚµãµÄÖ¸Õë£¬pre£¨¼ÇÂ¼´ýÉ¾³ý½ÚµãµÄÇ°Ò»½Úµã£©ºÍ cur (¼ÇÂ¼µ±Ç°½Úµã)£»
-//
-//±éÀúÕû¸öÁ´±í£¬²éÕÒ½ÚµãÖµÎª val µÄ½Úµã£¬ÕÒµ½¼´É¾³ý¸Ã½Úµã£¬·ñÔò¼ÌÐø²éÕÒ¡£
-//
-//2.1 ÕÒµ½£¬½«µ±Ç°½ÚµãµÄÇ°Ò»½Úµã£¨Ö®Ç°×î½üÒ»¸öÖµ²»µÈÓÚ val µÄ½Úµã(pre)£©Á¬½Óµ½µ±Ç°½Úµã£¨cur£©µÄ
-//ÏÂÒ»¸ö½Úµã£¨¼´½« pre µÄÏÂÒ»½ÚµãÖ¸Ïò cur µÄÏÂÒ»½Úµã£ºpre->next = cur->next£©¡£
-//
-//2.2 Ã»ÕÒµ½£¬¸üÐÂ×î½üÒ»¸öÖµ²»µÈÓÚ val µÄ½Úµã£¨¼´ pre = cur£©£¬²¢¼ÌÐø±éÀú£¨cur = cur->next£©¡£
-//*/
-//class Solution {
-//public:
-//    ListNode* removeElements(ListNode* head, int val) {
-//        while (head != nullptr and head->val == val) {
-//            ListNode* temp = head;
-//            head = head->next;
-//            delete temp;
-//        }
-//              
-//        // ÕâÀï½«Á½¸öÖ¸ÕëÖ¸Ïòhead£¬Èô¸Ä±äµØÖ·ÄÚµÄÄÚÈÝ£¬ÔòheadÒ²»á¸Ä±ä
-//        ListNode* cur = head;                           // ¼ÇÂ¼µ±Ç°½Úµã
-//        ListNode* pre = head;                           // ¼ÇÂ¼´ýÉ¾³ý½ÚµãµÄÇ°Ò»½Úµã
-//
-//        while (cur != nullptr) {
-//            if (cur->val == val) pre->next = cur->next; // ´æÔÚ±»É¾³ýµÄ½áµã£¬½«preµÄÏÂ¸öÖ¸ÕëÌø¹ý£¬µØÖ·µÄÄÚÈÝ¸Ä±ä£¬headºÍcurÒ²¸Ä±ä
-//            else pre = cur;
-//            cur = cur->next;                         
-//        }
-//
-//        return head;
-//    }
-//};
-//
-//
-//// ÐéÄâÉÚ±ø
-//class Solution {
-//public:
-//    ListNode* removeElements(ListNode* head, int val) {
-//        auto dummy_head = new ListNode;
-//        auto cur = new ListNode;
-//        dummy_head->next = head;                        // ¶¨ÒåÐéÄâÉÚ±ø£¬´ËÊ±Í·½áµãÎªdummy_head
-//        cur = dummy_head;           
-//        
-//        // ´ÓÐéÄâÉÚ±ø¿ªÊ¼±éÀú£¬ÄÇÃ´µÚÒ»¸öµÄcur->nextÆäÊµ¾ÍÊÇ±¾À´µÄhead
-//        while (cur->next != nullptr) {
-//            if (cur->next->val == val) cur->next = cur->next->next;
-//            // curÒÑ¾­ÓÐÒ»¸öÖ¸ÏòµÄÄÚÈÝÁË£¬ËùÒÔÕâÀï²¢Ã»ÓÐ¸Ä±äÐòÁÐµÄÄÚÈÝ£¬Ö»ÊÇ¶ÔÒ»¸öÔ­±¾Ö¸ÏòÐòÁÐµÄ±äÁ¿»»ÁËÁíÒ»¸öÖ¸Ïò
-//            else cur = cur->next;   
-//        }
-//
-//        delete cur;
-//
-//        // ²»ÄÜreturn head, ÒòÎªÔ­±¾µÄÍ·½áµã¿ÉÄÜÒÑ¾­±»É¾³ý£¬¶øÓ¦¸ÃreturnÐéÄâÉÚ±øµÄÏÂÒ»¸ö½áµã
-//        return dummy_head->next;
-//    }
-//};
+/*
+ç»™ä½ ä¸€ä¸ªé“¾è¡¨çš„å¤´èŠ‚ç‚¹ head å’Œä¸€ä¸ªæ•´æ•° val ï¼Œè¯·ä½ åˆ é™¤é“¾è¡¨ä¸­æ‰€æœ‰æ»¡è¶³ Node.val == val 
+çš„èŠ‚ç‚¹ï¼Œå¹¶è¿”å›ž æ–°çš„å¤´èŠ‚ç‚¹ ã€‚
+*/
+
+/**
+* Definition for singly-linked list.
+* struct ListNode {
+*     int val;
+*     ListNode *next;
+*     ListNode() : val(0), next(nullptr) {}
+*     ListNode(int x) : val(x), next(nullptr) {}
+*     ListNode(int x, ListNode *next) : val(x), next(next) {}
+* };
+*/
+
+struct ListNode {
+   int val;
+   ListNode* next;
+   ListNode(int x) : val(x), next(nullptr) {}
+   ListNode() :val(0), next(nullptr) {}
+   ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
+
+// 1.è¿­ä»£
+class Solution {
+public:
+   ListNode* removeElements(ListNode* head, int val) {
+       if (head == nullptr) return head;
+
+       while (head != nullptr and head->val == val) {           // å¦‚æžœç›®æ ‡æ˜¯å¤´ç»“ç‚¹ï¼Œåˆ é™¤å¤´ç»“ç‚¹
+           ListNode* temp = head;
+           head = head->next;
+           delete temp;                                         // å¤´ç»“ç‚¹åˆ é™¤åŽé‡Šæ”¾å†…å­˜
+       }
+
+       ListNode* cur = head;                                    // å®šä¹‰ä¸´æ—¶æŒ‡é’ˆ
+       while (cur != nullptr and cur->next != nullptr) {
+           if (cur->next->val == val) {
+               ListNode* temp = cur->next;
+               cur->next = cur->next->next;                     // åˆ é™¤å’Œvalç›¸ç­‰çš„éžå¤´ç»“ç‚¹
+               delete temp;
+           }
+           else
+               cur = cur->next;
+       }
+       return head;
+   }
+};
+
+// 2-1.é€’å½’
+class Solution {
+public:
+   ListNode* removeElements(ListNode* head, int val) {
+       // å¦‚æžœå¤´æŒ‡é’ˆçš„å€¼ç­‰äºŽvalï¼Œåˆ é™¤
+       while (head != nullptr and head->val == val) {
+           ListNode* temp = head;
+           head = head->next;
+           delete temp;
+       }
+
+       // åˆ¤æ–­å¤´æŒ‡é’ˆæ˜¯å¦ä¸ºç©º
+       if (head == nullptr) return head;
+
+       // è‹¥å¤´æŒ‡é’ˆä¸ä¸ºç©ºï¼Œåˆ é™¤å¤´èŠ‚ç‚¹åŽæ‰€æœ‰å€¼ä¸º val çš„èŠ‚ç‚¹
+       head->next = removeElements(head->next, val);
+
+       return head;
+   }
+};
+
+// 2-2.é€’å½’çš„åŒ–ç®€(æ²¡æœ‰é‡Šæ”¾å†…å­˜)
+class Solution {
+public:
+   ListNode* removeElements(ListNode* head, int val) {
+       if (!head) return head;                             // å¤´æŒ‡é’ˆä¸ºç©ºï¼Œè¿”å›ž
+
+       head->next = removeElements(head->next, val);       // é¦–å…ˆå¤„ç†å¤´æŒ‡é’ˆåŽé¢çš„ç»“ç‚¹
+
+       return head->val == val ? head->next : head;
+   }
+};
+
+// 3.åŒæŒ‡é’ˆ
+/*
+è®¾ç½®ä¸¤ä¸ªå‡æŒ‡å‘å¤´èŠ‚ç‚¹çš„æŒ‡é’ˆï¼Œpreï¼ˆè®°å½•å¾…åˆ é™¤èŠ‚ç‚¹çš„å‰ä¸€èŠ‚ç‚¹ï¼‰å’Œ cur (è®°å½•å½“å‰èŠ‚ç‚¹)ï¼›
+
+éåŽ†æ•´ä¸ªé“¾è¡¨ï¼ŒæŸ¥æ‰¾èŠ‚ç‚¹å€¼ä¸º val çš„èŠ‚ç‚¹ï¼Œæ‰¾åˆ°å³åˆ é™¤è¯¥èŠ‚ç‚¹ï¼Œå¦åˆ™ç»§ç»­æŸ¥æ‰¾ã€‚
+
+2.1 æ‰¾åˆ°ï¼Œå°†å½“å‰èŠ‚ç‚¹çš„å‰ä¸€èŠ‚ç‚¹ï¼ˆä¹‹å‰æœ€è¿‘ä¸€ä¸ªå€¼ä¸ç­‰äºŽ val çš„èŠ‚ç‚¹(pre)ï¼‰è¿žæŽ¥åˆ°å½“å‰èŠ‚ç‚¹ï¼ˆcurï¼‰çš„
+ä¸‹ä¸€ä¸ªèŠ‚ç‚¹ï¼ˆå³å°† pre çš„ä¸‹ä¸€èŠ‚ç‚¹æŒ‡å‘ cur çš„ä¸‹ä¸€èŠ‚ç‚¹ï¼špre->next = cur->nextï¼‰ã€‚
+
+2.2 æ²¡æ‰¾åˆ°ï¼Œæ›´æ–°æœ€è¿‘ä¸€ä¸ªå€¼ä¸ç­‰äºŽ val çš„èŠ‚ç‚¹ï¼ˆå³ pre = curï¼‰ï¼Œå¹¶ç»§ç»­éåŽ†ï¼ˆcur = cur->nextï¼‰ã€‚
+*/
+class Solution {
+public:
+   ListNode* removeElements(ListNode* head, int val) {
+       while (head != nullptr and head->val == val) {
+           ListNode* temp = head;
+           head = head->next;
+           delete temp;
+       }
+             
+       // è¿™é‡Œå°†ä¸¤ä¸ªæŒ‡é’ˆæŒ‡å‘headï¼Œè‹¥æ”¹å˜åœ°å€å†…çš„å†…å®¹ï¼Œåˆ™headä¹Ÿä¼šæ”¹å˜
+       ListNode* cur = head;                           // è®°å½•å½“å‰èŠ‚ç‚¹
+       ListNode* pre = head;                           // è®°å½•å¾…åˆ é™¤èŠ‚ç‚¹çš„å‰ä¸€èŠ‚ç‚¹
+
+       while (cur != nullptr) {
+           if (cur->val == val) pre->next = cur->next; // å­˜åœ¨è¢«åˆ é™¤çš„ç»“ç‚¹ï¼Œå°†preçš„ä¸‹ä¸ªæŒ‡é’ˆè·³è¿‡ï¼Œåœ°å€çš„å†…å®¹æ”¹å˜ï¼Œheadå’Œcurä¹Ÿæ”¹å˜
+           else pre = cur;
+           cur = cur->next;                         
+       }
+
+       return head;
+   }
+};
+
+
+// è™šæ‹Ÿå“¨å…µ
+class Solution {
+public:
+   ListNode* removeElements(ListNode* head, int val) {
+       auto dummy_head = new ListNode;
+       auto cur = new ListNode;
+       dummy_head->next = head;                        // å®šä¹‰è™šæ‹Ÿå“¨å…µï¼Œæ­¤æ—¶å¤´ç»“ç‚¹ä¸ºdummy_head
+       cur = dummy_head;           
+       
+       // ä»Žè™šæ‹Ÿå“¨å…µå¼€å§‹éåŽ†ï¼Œé‚£ä¹ˆç¬¬ä¸€ä¸ªçš„cur->nextå…¶å®žå°±æ˜¯æœ¬æ¥çš„head
+       while (cur->next != nullptr) {
+           if (cur->next->val == val) cur->next = cur->next->next;
+           // curå·²ç»æœ‰ä¸€ä¸ªæŒ‡å‘çš„å†…å®¹äº†ï¼Œæ‰€ä»¥è¿™é‡Œå¹¶æ²¡æœ‰æ”¹å˜åºåˆ—çš„å†…å®¹ï¼Œåªæ˜¯å¯¹ä¸€ä¸ªåŽŸæœ¬æŒ‡å‘åºåˆ—çš„å˜é‡æ¢äº†å¦ä¸€ä¸ªæŒ‡å‘
+           else cur = cur->next;   
+       }
+
+       // ä¸èƒ½return head, å› ä¸ºåŽŸæœ¬çš„å¤´ç»“ç‚¹å¯èƒ½å·²ç»è¢«åˆ é™¤ï¼Œè€Œåº”è¯¥returnè™šæ‹Ÿå“¨å…µçš„ä¸‹ä¸€ä¸ªç»“ç‚¹
+       return dummy_head->next;
+   }
+};
