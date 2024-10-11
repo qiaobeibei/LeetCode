@@ -102,6 +102,15 @@
     <ClCompile Include="24.反转字符串 II.cpp">
       <Filter>源文件\字符串</Filter>
     </ClCompile>
+    <ClCompile Include="25.替换数字.cpp">
+      <Filter>源文件\字符串</Filter>
+    </ClCompile>
+    <ClCompile Include="26.翻转字符串里的单次.cpp">
+      <Filter>源文件\字符串</Filter>
+    </ClCompile>
+    <ClCompile Include="27.右旋字符串.cpp">
+      <Filter>源文件\字符串</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="快速排序算法.h">
