@@ -111,6 +111,9 @@
     <ClCompile Include="27.右旋字符串.cpp">
       <Filter>源文件\字符串</Filter>
     </ClCompile>
+    <ClCompile Include="28.实现 strStr().cpp">
+      <Filter>源文件\字符串</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="快速排序算法.h">
