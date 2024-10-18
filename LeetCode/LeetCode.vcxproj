@@ -159,6 +159,7 @@
     <ClCompile Include="26.翻转字符串里的单次.cpp" />
     <ClCompile Include="27.右旋字符串.cpp" />
     <ClCompile Include="28.实现 strStr().cpp" />
+    <ClCompile Include="29.重复的子字符串.cpp" />
     <ClCompile Include="3.有序数组的平方.h" />
     <ClCompile Include="4.长度最小的子数组.h" />
     <ClCompile Include="5.螺旋矩阵II.h" />
