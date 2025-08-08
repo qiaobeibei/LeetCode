@@ -25,7 +25,6 @@ int main() {
 	return 0;
 }
 
-
 void reverse(string& s, int start, int end) {
 	for (int i = start, j = end; i < j; i++, j--) {
 		std::swap(s[i], s[j]);

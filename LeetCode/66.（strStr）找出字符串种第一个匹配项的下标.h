@@ -1,56 +1,13 @@
-/*
-给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成
-*/
+#pragma once
+// https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
 #include <iostream>
 #include <string>
 #include <vector>
-
 using std::string;
 using std::vector;
 
-// KMP解法
-// 简单来说，就是证明最小重复子串能否被主串整除，
-// 因为可以证明：如果这个字符串s是由重复子串组成，那么最长相等前后缀不包含的子串是字符串s的最小重复子串
-// 因为，s[0,1]=s[2,3]=s[4,5]=s[6,7]
-// 且可以得出：最长相等前后缀不包含的子串的长度如果可以被字符串s的长度整除，那么必定是最小重复子串，如果不能
-// 整除那么就说明s的最长公共前后缀不能由最小重复子串字符，显然不对
+// KMP算法
 class Solution {
-public:
-    vector<int> GetNext(string p) {
-        std::size_t len = p.length();
-        vector<int> next(len + 1, 0); 
-
-        for (int j = 1, i = 0; j < len; j++) {
-            while (i > 0 and p[i] != p[j]) i = next[i];
-            if (p[i] == p[j]) i++;
-            next[j + 1] = i;
-        }
-        next[0] = -1;
-        return next;
-    }
-
-    void GetNextVal(vector<int>& next, string p) {
-        for (int j = 1; j < p.length(); j++) {
-            if (p[next[j]] == p[j])
-                next[j] = next[next[j]];
-        }
-    }
-
-    bool repeatedSubstringPattern(string s) {
-        vector<int> next = GetNext(s);
-        GetNextVal(next, s);
-        // 字符串排除最长公共前后缀后的剩余字符串如果可以被主串整除，那么必定是最长重复子串
-        // 由重复子串组成的字符串中，最长相等前后缀不包含的子串就是最小重复子串
-        if (s.size() % (s.size() - next[s.size()] ) == 0 and next[s.size()] != 0)
-            return true;
-        return false;
-    }
-};
-
-
-// 移动匹配 + KMP
-// 将字符串s赋值给a和b，并将a的首字符和b的尾字符去除，如果a+b中有s的子串，那么s必定可以通过子串组成
-class KMP {
 public:
     vector<int> GetNext(string p) {
         std::size_t len = p.length();
@@ -117,18 +74,5 @@ public:
 
         }
         return res.size() > 0 ? res[0] : -1;
-    }
-};
-
-class Solution {
-public:
-    bool repeatedSubstringPattern(std::string s) {
-        if (s.size() <= 1) return true;
-        std::string m = s, n = s;
-        m.erase(m.begin());
-        n.pop_back();
-        int res = KMP().strStr(m + n, s);
-
-        return res != -1 ? true : false;
     }
 };

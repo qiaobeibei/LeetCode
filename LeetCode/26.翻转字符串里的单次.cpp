@@ -32,7 +32,8 @@ public:
     void removeExtraSpaces(string& s) { //去除所有空格并在相邻单词之间添加空格, 快慢指针
         int left = 0;
         for (int right = 0; right < s.size(); right++) {
-            if (s[right] != ' ') {
+            if (s[right] != ' ') { // 遇到了一个单词
+                // 如果 left 不为 0，说明不是第一个单词，需要在当前单词前添加一个空格，即 s[left++] = ' '
                 if (left != 0) s[left++] = ' ';
                 while (right < s.size() and s[right] != ' ')
                     s[left++] = s[right++];

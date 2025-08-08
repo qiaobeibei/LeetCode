@@ -13,117 +13,389 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\数组">
-      <UniqueIdentifier>{8e4df1ff-df98-499c-9ea8-e00d09ab059f}</UniqueIdentifier>
+    <Filter Include="源文件\代码随想录">
+      <UniqueIdentifier>{37be1ee5-ea90-4c68-bb18-99c07d6805e9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\排序算法">
-      <UniqueIdentifier>{aa017955-74fc-423c-a3a2-a4caf41940c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\链表">
-      <UniqueIdentifier>{0f395990-77a3-4196-85f0-ac4711702a57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\哈希表">
+    <Filter Include="源文件\代码随想录\哈希表">
       <UniqueIdentifier>{31747483-8abf-4716-b3ae-bf144a58eb66}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\字符串">
+    <Filter Include="源文件\代码随想录\链表">
+      <UniqueIdentifier>{0f395990-77a3-4196-85f0-ac4711702a57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\代码随想录\排序算法">
+      <UniqueIdentifier>{aa017955-74fc-423c-a3a2-a4caf41940c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\代码随想录\数组">
+      <UniqueIdentifier>{8e4df1ff-df98-499c-9ea8-e00d09ab059f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\代码随想录\字符串">
       <UniqueIdentifier>{0d0bdb48-965a-4f2c-86cc-e901f2140193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\力扣hot100">
+      <UniqueIdentifier>{2bb1f693-9ca3-4e1f-ba56-207322cac2b1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1.二分查找.h">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="2.移除元素.h">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="3.有序数组的平方.h">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="4.长度最小的子数组.h">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="5.螺旋矩阵II.h">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="6.区间和.cpp">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="7.开发商购买土地.cpp">
-      <Filter>源文件\数组</Filter>
+      <Filter>源文件\代码随想录\数组</Filter>
     </ClCompile>
     <ClCompile Include="8.移除链表元素.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="9.设计链表.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="10.反转链表.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="11.两两交换链表中的节点.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="12.删除链表的倒数第N个节点.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="13.链表相交.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="14.环形链表Ⅱ.cpp">
-      <Filter>源文件\链表</Filter>
+      <Filter>源文件\代码随想录\链表</Filter>
     </ClCompile>
     <ClCompile Include="15.有效的字母异位词.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="16.两个数组的交集.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="17.快乐数.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="18.两数之和.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="19.四数相加Ⅱ.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="20.赎金信.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="21.三数之和.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="22.四数之和.cpp">
-      <Filter>源文件\哈希表</Filter>
+      <Filter>源文件\代码随想录\哈希表</Filter>
     </ClCompile>
     <ClCompile Include="23.反转字符串.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="24.反转字符串 II.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="25.替换数字.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="26.翻转字符串里的单次.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="27.右旋字符串.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="28.实现 strStr().cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
     </ClCompile>
     <ClCompile Include="29.重复的子字符串.cpp">
-      <Filter>源文件\字符串</Filter>
+      <Filter>源文件\代码随想录\字符串</Filter>
+    </ClCompile>
+    <ClCompile Include="31.K个一组翻转链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClCompile>
+    <ClCompile Include="54.二分查找.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClCompile>
+    <ClCompile Include="55.移除元素.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClCompile>
+    <ClCompile Include="67.单词拆分⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClCompile>
+    <ClCompile Include="68.数组中第K个最大元素⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClCompile>
+    <ClCompile Include="72.爬楼梯.h">
+      <Filter>源文件\力扣hot100</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="快速排序算法.h">
-      <Filter>源文件\排序算法</Filter>
+      <Filter>源文件\代码随想录\排序算法</Filter>
     </ClInclude>
     <ClInclude Include="大根堆排序.h">
-      <Filter>源文件\排序算法</Filter>
+      <Filter>源文件\代码随想录\排序算法</Filter>
     </ClInclude>
+    <ClInclude Include="1.两数之和.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="2.字母异位词分组.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="3.最长连续序列⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="4.移动零⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="5.盛最多水的容器⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="6.三数之和⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="7.接雨水⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="8.无重复字符的最长字串⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="9.找到字符串中所有字母异位词⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="10.和为K的子数组⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="11.滑动窗口最大值⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="12.最小覆盖字串⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="14.合并区间.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="15.轮转数组.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="16.除自身以外数组的乘积.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="17.缺失的第一个正数⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="18.矩阵置零⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="19.螺旋矩阵⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="20.旋转图像⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="21.搜索二维矩阵Ⅱ⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="22.相交链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="23.反转链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="24.回文链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="25.环形链表.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="26.环形链表Ⅱ⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="27.合并两个有序链表.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="28.两数相加⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="29.删除链表的倒数第N个结点⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="30.两两交换链表中的节点⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="32.反转链表Ⅱ⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="33.随机链表的复制⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="35.排序链表⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="36.合并K个升序链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="37.LRU缓存⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="38.二叉树的中序遍历⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="39.二叉树的最大深度.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="40.翻转二叉树⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="41.对称二叉树⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="42.二叉树的直径⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="43.二叉树的层序遍历⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="44.将有序数组转换为二叉搜索树⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="45.验证二叉搜索树⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="46.二叉搜索树中第K小的元素.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="47.二叉树的右视图⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="48.二叉树展开为链表⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="49.从前序与中序遍历序列构造二叉树⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="52.二叉树中的最大路径和⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="50.路径总和Ⅲ⭐⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="51.二叉树的最近公共祖先⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="53.LFU⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="56.有序数组的平方⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="57.长度最小的子数组⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="58.反转字符串Ⅱ.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="59.分割回文串⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="60.寻找两个正序数组的中位数⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="61.最长回文子串⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="62.杨辉三角⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="63.电话号码的字母组合.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="64.子集⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="65.最长递增子序列⭐⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="66.（strStr）找出字符串种第一个匹配项的下标.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="69.岛屿数量⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="70.最小路径和⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="71.最小栈.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="73.腐烂的橘子.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="74.课程表.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="75.实现Trie(前缀树).h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="76.全排列.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="77.组合总和.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="78.括号生成.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="79.组合.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="80.组合总和Ⅲ.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="81.单词搜索.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="82.N皇后.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="83.搜索插入位置.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="84.搜索二维矩阵.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="85.在排序数组中查找元素的第一个和最后一个位置.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="86.搜索旋转排序数组.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="87.寻找旋转排序数组中的最小值.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="88.有效的括号.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+    <ClInclude Include="89.字符串解码.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="13.最大子数组和⭐.h">
+      <Filter>源文件\力扣hot100</Filter>
+    </None>
   </ItemGroup>
 </Project>

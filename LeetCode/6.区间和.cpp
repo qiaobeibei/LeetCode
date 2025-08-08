@@ -63,31 +63,3 @@
 //}
 //
 //
-////暴力解法，耗时严重
-//int main() {
-//	using std::cin;
-//	using std::cout;
-//	using std::vector;
-//
-//	int numl;
-//	cin >> numl;
-//	vector<int>* array = new vector<int>(numl, 0);
-//	for (int i = 0; i < numl; i++) {
-//		cin >> (*array)[i];
-//		while (cin and cin.get() != '\n')
-//			continue;
-//	}
-//
-//	int a, b;
-//	while (cin >> a >> b) {
-//		int sum = 0;
-//		for (a; a <= b; a++)
-//			sum += (*array)[a];
-//		cout << sum << std::endl;
-//	}
-//
-//	delete array;
-//
-//	return 0;
-//}
-//
